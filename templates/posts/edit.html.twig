@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1> Edit post</h1> 
+    <form class ="post-form" action="/post/save" method="POST">
+        <input type="hidden" name="id" value="{{ post.id }}"/>
+        <lable>
+            Enter Title
+            <input value="{{ post.title }}" name ="title" tipe ="text"/>
+        </lable>
+        <lable>
+            Enter Description
+            <textarea name ="description">{{ post.description }}</textarea>
+        </lable>
+        <button class="btn-blue">Edit post</button>
+    </form>
+{% endblock %}
